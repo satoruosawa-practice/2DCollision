@@ -11,11 +11,13 @@
 #include "ofMain.h"
 #include "./global_definition.h"
 #include "./app_time.h"
+#include "./scene.h"
 
 class Sphere {
  public:
   Sphere() = default;
   explicit Sphere(const AppTime &app_time,
+                  const Scene &scene,
                   const ofVec2f &velocity,
                   const ofVec2f &position,
                   const float &radius,
@@ -34,13 +36,13 @@ class Sphere {
   void bounceOfWalls(const float &radius,
                      ofVec2f * position, ofVec2f * velocity);
   const AppTime * app_time_;
+  const Scene * scene_;
 
-  ofVec2f position_;
+  ofVec2f position_;  // m
   ofVec2f velocity_;  // m/s
   ofVec2f acceleration_;  // m/s2
   ofVec2f force_;  // N
   float radius_;  // m
   float mass_;  // kg
-  float cor_;  // coefficient of restitution
   float damping_;
 };

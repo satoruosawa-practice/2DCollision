@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "./global_definition.h"
 #include "./app_time.h"
+#include "./scene.h"
 #include "./sphere.h"
 
 class ofApp : public ofBaseApp{
@@ -27,4 +28,5 @@ class ofApp : public ofBaseApp{
   vector<Sphere> spheres_;
 //  Sphere sphere_;
 
+  Scene scene_;
 };

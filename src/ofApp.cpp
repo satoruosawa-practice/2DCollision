@@ -6,7 +6,8 @@ void ofApp::setup() {
 //  ofSetVerticalSync(false);
 //  ofSetFrameRate(0);
   ofBackground(63);
-
+  
+  scene_ = Scene();
   app_time_.setup();
   for (int i = 0; i < 1000; i++) {
     ofVec2f velocity = 3.0 * ofVec2f(1.0 - ofRandom(2.0),1.0 - ofRandom(2.0));
@@ -16,7 +17,7 @@ void ofApp::setup() {
                                         static_cast<float>(PX_PER_METER)));
     float radius = ofRandom(0.01, 0.05);
     float mass = ofRandom(1.0, 2.0);
-    Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+    Sphere s = Sphere(app_time_, scene_, velocity, position, radius, mass);
     spheres_.push_back(s);
   }
 }
