@@ -15,11 +15,15 @@
 class Sphere {
  public:
   Sphere() = default;
-  explicit Sphere(const AppTime &app_time);
-  void reset();
+  explicit Sphere(const AppTime &app_time,
+                  const ofVec2f &velocity,
+                  const ofVec2f &position,
+                  const float &radius,
+                  const float &mass);
+  void reset(const ofVec2f &velocity,
+             const ofVec2f &position);
   void update();
   void draw();
-  void drawParameters();
   void resetForce();
 
   void addForce(const ofVec2f &f) {force_ += f; }
@@ -38,4 +42,5 @@ class Sphere {
   float radius_;  // m
   float mass_;  // kg
   float cor_;  // coefficient of restitution
+  float damping_;
 };

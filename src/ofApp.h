@@ -24,8 +24,7 @@ class ofApp : public ofBaseApp{
   void gotMessage(ofMessage msg);
 
   AppTime app_time_;
-  Sphere sphere_;
+  vector<Sphere> spheres_;
+//  Sphere sphere_;
 
-  uint64_t push_duration_;
-  ofVec2f push_force_;
 };

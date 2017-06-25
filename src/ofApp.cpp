@@ -8,68 +8,43 @@ void ofApp::setup() {
   ofBackground(63);
 
   app_time_.setup();
-  sphere_ = Sphere(app_time_);
+  for (int i = 0; i < 1000; i++) {
+    ofVec2f velocity = 3.0 * ofVec2f(1.0 - ofRandom(2.0),1.0 - ofRandom(2.0));
+    ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
+                                        static_cast<float>(PX_PER_METER)),
+                               ofRandom(ofGetHeight() /
+                                        static_cast<float>(PX_PER_METER)));
+    float radius = ofRandom(0.01, 0.05);
+    float mass = ofRandom(1.0, 2.0);
+    Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+    spheres_.push_back(s);
+  }
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
   app_time_.update();
-  sphere_.resetForce();
-
-  if (push_duration_ > app_time_.getDeltaTimeMS()) {
-    sphere_.addForce(push_force_);
-    push_duration_ -= app_time_.getDeltaTimeMS();
-  } else if (push_duration_ != 0) {
-    float remaining = static_cast<float>(push_duration_) /
-        static_cast<float>(app_time_.getDeltaTimeMS());
-    sphere_.addForce(push_force_ * remaining);
-    push_force_ = ofVec2f(0.0, 0.0);
-    push_duration_ = 0;
+  for (Sphere &s : spheres_){
+    s.resetForce();
+    s.update();
   }
-  sphere_.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
   ofDrawGrid(PX_PER_METER, 11, false, false, false, true);
-  sphere_.draw();
+  for (Sphere &s : spheres_){
+    s.draw();
+  }
 
-  ofDrawBitmapString("frameRate: " +
-                     ofToString(ofGetFrameRate(), 1) +
-                     " fps",
+  ofDrawBitmapString("frameRate: " + ofToString(ofGetFrameRate(), 1) + " fps",
                      10, 20);
-  ofDrawBitmapString("time: " +
-                     ofToString(app_time_.getElapsedTimeS(), 1) +
-                     " s",
-                     200, 20);
-  sphere_.drawParameters();
+  ofDrawBitmapString("time: " + ofToString(app_time_.getElapsedTimeS(), 1) +
+                     " s", 200, 20);
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
-  switch(key) {
-    case OF_KEY_LEFT:
-      push_force_ += ofVec2f(-1.0, 0.0);
-      push_duration_ += 1000;
-      break;
-    case OF_KEY_RIGHT:
-      push_force_ += ofVec2f(1.0, 0.0);
-      push_duration_ += 1000;
-      break;
-    case OF_KEY_UP:
-      push_force_ += ofVec2f(0.0, -1.0);
-      push_duration_ += 1000;
-      break;
-    case OF_KEY_DOWN:
-      push_force_ += ofVec2f(0.0, 1.0);
-      push_duration_ += 1000;
-      break;
-    case 'c':
-      sphere_.reset();
-      break;
-    default:
-      break;
-  }
 }
 
 //--------------------------------------------------------------
