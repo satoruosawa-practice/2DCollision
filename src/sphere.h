@@ -33,6 +33,7 @@ class Sphere {
   ofVec2f getVelocity() const { return velocity_; }
   ofVec2f getPosition() const { return position_; }
   float getRadius() const { return radius_; }
+  float getMass() const {return mass_; }
 
  private:
   void updateForce();

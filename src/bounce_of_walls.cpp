@@ -8,9 +8,7 @@
 
 #include "./bounce_of_walls.h"
 
-BounceOfWalls::BounceOfWalls() {
-  cor_ = 1.0;
-}
+float BounceOfWalls::cor_ = 1.0;
 
 void BounceOfWalls::bounce(const float &radius,
                            ofVec2f * position,

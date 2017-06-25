@@ -10,11 +10,16 @@
 
 #include "ofMain.h"
 #include "./bounce_of_walls.h"
+#include "collision.h"
 #include "./sphere.h"
 
 class Scene {
  public:
-  void update(Sphere * s);
+  void setup();
+  void updateSingle(Sphere * s);
+  void updateMutual(Sphere * sphere_a, Sphere * sphere_b);
+
  private:
-  BounceOfWalls bounce_of_walls_;
+//  BounceOfWalls bounce_of_walls_;
+//  Collision collision_;
 };

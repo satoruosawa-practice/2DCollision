@@ -7,15 +7,15 @@ void ofApp::setup() {
 //  ofSetFrameRate(0);
   ofBackground(63);
   
-  scene_ = Scene();
+  scene_.setup();
   app_time_.setup();
-  for (int i = 0; i < 1000; i++) {
+  for (int i = 0; i < 100; i++) {
     ofVec2f velocity = 3.0 * ofVec2f(1.0 - ofRandom(2.0),1.0 - ofRandom(2.0));
     ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
                                         static_cast<float>(PX_PER_METER)),
                                ofRandom(ofGetHeight() /
                                         static_cast<float>(PX_PER_METER)));
-    float radius = ofRandom(0.01, 0.05);
+    float radius = ofRandom(0.01, 0.1);
     float mass = ofRandom(1.0, 2.0);
     Sphere s = Sphere(app_time_, velocity, position, radius, mass);
     spheres_.push_back(s);
@@ -30,8 +30,14 @@ void ofApp::update() {
     s.update();
   }
   for (Sphere &s : spheres_){
-    scene_.update(&s);
+    scene_.updateSingle(&s);
   }
+  for (int i = 0; i < spheres_.size(); i++) {
+    for (int j = 0; j < i; j++) {
+      scene_.updateMutual(&spheres_[i], &spheres_[j]);
+    }
+  }
+
 }
 
 //--------------------------------------------------------------

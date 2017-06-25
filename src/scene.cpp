@@ -8,12 +8,20 @@
 
 #include "./scene.h"
 
-void Scene::update(Sphere * sphere) {
+void Scene::setup() {
+  
+}
+
+void Scene::updateSingle(Sphere * sphere) {
   // bounce of walls
   float r = sphere->getRadius() * PX_PER_METER;
   ofVec2f p = sphere->getPosition() * PX_PER_METER;
   ofVec2f v = sphere->getVelocity() * PX_PER_METER;
-  bounce_of_walls_.bounce(r, &p, &v);
+  BounceOfWalls::bounce(r, &p, &v);
   sphere->setVelocity(v / static_cast<float>(PX_PER_METER));
   sphere->setPosition(p / static_cast<float>(PX_PER_METER));
+}
+
+void Scene::updateMutual(Sphere * sphere_a, Sphere * sphere_b) {
+  Collision::circles(sphere_a, sphere_b);
 }

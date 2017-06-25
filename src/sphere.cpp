@@ -7,6 +7,7 @@
 //
 
 #include "./sphere.h"
+
 Sphere::Sphere(const AppTime &app_time,
                const ofVec2f &position,
                const ofVec2f &velocity,
@@ -15,7 +16,7 @@ Sphere::Sphere(const AppTime &app_time,
   app_time_ = &app_time;
   radius_ = radius;
   mass_ = mass;
-  damping_ = 1;
+  damping_ = 0.0;
   reset(position, velocity);
 }
 
