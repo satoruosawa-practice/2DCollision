@@ -8,8 +8,12 @@
 
 #include "./scene.h"
 
-void Scene::update(const float &radius,
-              ofVec2f * position,
-              ofVec2f * velocity) const {
-  bounce_of_walls_.bounce(radius, position, velocity);
+void Scene::update(Sphere * sphere) {
+  // bounce of walls
+  float r = sphere->getRadius() * PX_PER_METER;
+  ofVec2f p = sphere->getPosition() * PX_PER_METER;
+  ofVec2f v = sphere->getVelocity() * PX_PER_METER;
+  bounce_of_walls_.bounce(r, &p, &v);
+  sphere->setVelocity(v / static_cast<float>(PX_PER_METER));
+  sphere->setPosition(p / static_cast<float>(PX_PER_METER));
 }

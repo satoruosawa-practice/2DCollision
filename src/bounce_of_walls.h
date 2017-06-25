@@ -15,7 +15,7 @@ class BounceOfWalls {
  public:
   BounceOfWalls();
   void bounce(const float &radius,
-              ofVec2f * position, ofVec2f * velocity) const;
+              ofVec2f * position, ofVec2f * velocity);
 
  private:
   float cor_;  // coefficient of restitution

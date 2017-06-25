@@ -14,33 +14,26 @@ BounceOfWalls::BounceOfWalls() {
 
 void BounceOfWalls::bounce(const float &radius,
                            ofVec2f * position,
-                           ofVec2f * velocity) const {
-  ofVec2f p = *position * PX_PER_METER;
-  ofVec2f v = *velocity * PX_PER_METER;
-  float r = radius * PX_PER_METER;
-
-  float xmin = r;
-  float xmax = ofGetWidth() - r;
-  float ymin = r;
-  float ymax = ofGetHeight() - r;
-
-  if (p.x < xmin) {
-    v.x *= -cor_;
-    p.x = xmin + (xmin - p.x);
-  } else if (p.x > xmax) {
-    v.x *= -cor_;
-    p.x = xmax - (p.x - xmax);
+                           ofVec2f * velocity) {
+  float xmin = radius;
+  float xmax = ofGetWidth() - radius;
+  float ymin = radius;
+  float ymax = ofGetHeight() - radius;
+  
+  if (position->x < xmin) {
+    velocity->x *= -cor_;
+    position->x = xmin + (xmin - position->x);
+  } else if (position->x > xmax) {
+    velocity->x *= -cor_;
+    position->x = xmax - (position->x - xmax);
   }
-  if (p.y < ymin) {
-    v.y *= -cor_;
-    p.y = ymin + (ymin - p.y);
-  } else if (p.y > ymax) {
-    v.y *= -cor_;
-    p.y = ymax - (p.y - ymax);
+  if (position->y < ymin) {
+    velocity->y *= -cor_;
+    position->y = ymin + (ymin - position->y);
+  } else if (position->y > ymax) {
+    velocity->y *= -cor_;
+    position->y = ymax - (position->y - ymax);
   }
-
-  *velocity = v / static_cast<float>(PX_PER_METER);
-  *position = p / static_cast<float>(PX_PER_METER);
 }
 
 

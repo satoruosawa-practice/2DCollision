@@ -25,8 +25,6 @@ class ofApp : public ofBaseApp{
   void gotMessage(ofMessage msg);
 
   AppTime app_time_;
-  vector<Sphere> spheres_;
-//  Sphere sphere_;
-
   Scene scene_;
+  vector<Sphere> spheres_;
 };

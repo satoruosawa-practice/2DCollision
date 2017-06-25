@@ -11,13 +11,11 @@
 #include "ofMain.h"
 #include "./global_definition.h"
 #include "./app_time.h"
-#include "./scene.h"
 
 class Sphere {
  public:
   Sphere() = default;
   explicit Sphere(const AppTime &app_time,
-                  const Scene &scene,
                   const ofVec2f &velocity,
                   const ofVec2f &position,
                   const float &radius,
@@ -27,16 +25,19 @@ class Sphere {
   void update();
   void draw();
   void resetForce();
-
   void addForce(const ofVec2f &f) {force_ += f; }
+  // setter
+  void setVelocity(const ofVec2f &v) { velocity_ = v; }
+  void setPosition(const ofVec2f &p) { position_ = p; }
+  // getter
+  ofVec2f getVelocity() const { return velocity_; }
+  ofVec2f getPosition() const { return position_; }
+  float getRadius() const { return radius_; }
 
  private:
   void updateForce();
   void updatePos();
-  void bounceOfWalls(const float &radius,
-                     ofVec2f * position, ofVec2f * velocity);
   const AppTime * app_time_;
-  const Scene * scene_;
 
   ofVec2f position_;  // m
   ofVec2f velocity_;  // m/s

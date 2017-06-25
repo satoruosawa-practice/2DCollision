@@ -10,12 +10,11 @@
 
 #include "ofMain.h"
 #include "./bounce_of_walls.h"
+#include "./sphere.h"
 
 class Scene {
-public:
-  void update(const float &radius,
-                ofVec2f * position,
-                ofVec2f * velocity) const;
-private:
+ public:
+  void update(Sphere * s);
+ private:
   BounceOfWalls bounce_of_walls_;
 };

@@ -17,7 +17,7 @@ void ofApp::setup() {
                                         static_cast<float>(PX_PER_METER)));
     float radius = ofRandom(0.01, 0.05);
     float mass = ofRandom(1.0, 2.0);
-    Sphere s = Sphere(app_time_, scene_, velocity, position, radius, mass);
+    Sphere s = Sphere(app_time_, velocity, position, radius, mass);
     spheres_.push_back(s);
   }
 }
@@ -28,6 +28,9 @@ void ofApp::update() {
   for (Sphere &s : spheres_){
     s.resetForce();
     s.update();
+  }
+  for (Sphere &s : spheres_){
+    scene_.update(&s);
   }
 }
 
