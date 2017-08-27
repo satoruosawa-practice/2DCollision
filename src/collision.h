@@ -17,4 +17,5 @@ class Collision {
 
  private:
   Collision();
+  static float cor_;  // coefficient of restitution
 };

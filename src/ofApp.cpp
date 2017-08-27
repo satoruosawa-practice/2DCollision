@@ -10,26 +10,41 @@ void ofApp::setup() {
   scene_.setup();
   app_time_.setup();
   for (int i = 0; i < 100; i++) {
-    ofVec2f velocity = 3.0 * ofVec2f(1.0 - ofRandom(2.0),1.0 - ofRandom(2.0));
+    ofVec2f velocity = 3.0 * ofVec2f(ofRandom(-0.0, 0.0),
+                                     ofRandom(-0.0, 0.0));
     ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
                                         static_cast<float>(PX_PER_METER)),
                                ofRandom(ofGetHeight() /
                                         static_cast<float>(PX_PER_METER)));
-    float radius = ofRandom(0.01, 0.1);
-    float mass = ofRandom(1.0, 2.0);
+    float radius = ofRandom(0.01, 0.1);  // m
+//    float radius = 0.2;  // m
+//    float mass = ofRandom(1.0, 10.0);
+    float mass = radius * 100.0;  // kg
     Sphere s = Sphere(app_time_, velocity, position, radius, mass);
     spheres_.push_back(s);
   }
+  
+  // super
+  ofVec2f velocity = 10.0 * ofVec2f(ofRandom(-1.0, 1.0),
+                                    ofRandom(-1.0, 1.0));
+  ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
+                                      static_cast<float>(PX_PER_METER)),
+                             ofRandom(ofGetHeight() /
+                                      static_cast<float>(PX_PER_METER)));
+  float radius = 0.2;  //m
+  float mass = radius * 1000.0;  // kg
+  Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+  spheres_.push_back(s);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
   app_time_.update();
-  for (Sphere &s : spheres_){
+  for (Sphere &s : spheres_) {
     s.resetForce();
     s.update();
   }
-  for (Sphere &s : spheres_){
+  for (Sphere &s : spheres_) {
     scene_.updateSingle(&s);
   }
   for (int i = 0; i < spheres_.size(); i++) {
