@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0C41EFFD90700E663BE /* app_time.cpp */; };
 		8728A0C91EFFD90700E663BE /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0C61EFFD90700E663BE /* sphere.cpp */; };
-		8728A0D61EFFE93900E663BE /* bounce_of_walls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D41EFFE93900E663BE /* bounce_of_walls.cpp */; };
+		8728A0D61EFFE93900E663BE /* wall_behavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D41EFFE93900E663BE /* wall_behavior.cpp */; };
 		8728A0DA1EFFEAA000E663BE /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D81EFFEAA000E663BE /* scene.cpp */; };
 		8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0DE1EFFFC5500E663BE /* collision.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -52,8 +52,8 @@
 		8728A0C51EFFD90700E663BE /* app_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = app_time.h; sourceTree = "<group>"; };
 		8728A0C61EFFD90700E663BE /* sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sphere.cpp; sourceTree = "<group>"; };
 		8728A0C71EFFD90700E663BE /* sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
-		8728A0D41EFFE93900E663BE /* bounce_of_walls.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bounce_of_walls.cpp; sourceTree = "<group>"; };
-		8728A0D51EFFE93900E663BE /* bounce_of_walls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bounce_of_walls.h; sourceTree = "<group>"; };
+		8728A0D41EFFE93900E663BE /* wall_behavior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wall_behavior.cpp; sourceTree = "<group>"; };
+		8728A0D51EFFE93900E663BE /* wall_behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wall_behavior.h; sourceTree = "<group>"; };
 		8728A0D81EFFEAA000E663BE /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		8728A0D91EFFEAA000E663BE /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		8728A0DE1EFFFC5500E663BE /* collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collision.cpp; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 			children = (
 				8728A0D81EFFEAA000E663BE /* scene.cpp */,
 				8728A0D91EFFEAA000E663BE /* scene.h */,
-				8728A0D41EFFE93900E663BE /* bounce_of_walls.cpp */,
-				8728A0D51EFFE93900E663BE /* bounce_of_walls.h */,
+				8728A0D41EFFE93900E663BE /* wall_behavior.cpp */,
+				8728A0D51EFFE93900E663BE /* wall_behavior.h */,
 				8728A0DE1EFFFC5500E663BE /* collision.cpp */,
 				8728A0DF1EFFFC5500E663BE /* collision.h */,
 			);
@@ -244,7 +244,7 @@
 				8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				8728A0C91EFFD90700E663BE /* sphere.cpp in Sources */,
-				8728A0D61EFFE93900E663BE /* bounce_of_walls.cpp in Sources */,
+				8728A0D61EFFE93900E663BE /* wall_behavior.cpp in Sources */,
 				8728A0DA1EFFEAA000E663BE /* scene.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 			);

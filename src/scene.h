@@ -9,7 +9,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "./bounce_of_walls.h"
+#include "./wall_behavior.h"
 #include "collision.h"
 #include "./sphere.h"
 

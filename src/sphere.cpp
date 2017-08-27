@@ -18,6 +18,7 @@ Sphere::Sphere(const AppTime &app_time,
   mass_ = mass;
   damping_ = 0.0;
   reset(position, velocity);
+  super_ball_flag_ = false;
 }
 
 void Sphere::reset(const ofVec2f &velocity, const ofVec2f &position) {
@@ -48,11 +49,15 @@ void Sphere::updatePos() {
 }
 
 void Sphere::draw() {
-  ofEnableSmoothing();
 //  ofFill();
 //  ofSetColor(10, 10, 10, 255);
 //  ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER - 2);
-  ofNoFill();
+  if(super_ball_flag_) {
+    ofFill();
+  } else {
+    ofNoFill();
+  }
+  ofSetLineWidth(3.0);
   ofSetColor(10, 10, 10, 255);
   ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
 }
