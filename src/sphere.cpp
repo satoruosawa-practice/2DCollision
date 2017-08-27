@@ -49,16 +49,19 @@ void Sphere::updatePos() {
 }
 
 void Sphere::draw() {
-//  ofFill();
-//  ofSetColor(10, 10, 10, 255);
-//  ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER - 2);
   if(super_ball_flag_) {
     ofFill();
+    ofSetLineWidth(0.0);
+    ofSetColor(10, 10, 10, 10);
+    ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
+    ofSetLineWidth(0.0);
+    ofSetColor(10, 10, 10, 255);
+    ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER - 10);
   } else {
-    ofNoFill();
+    ofFill();
+    ofSetLineWidth(0.0);
+    ofSetColor(10, 10, 10, 255);
+    ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
   }
-  ofSetLineWidth(3.0);
-  ofSetColor(10, 10, 10, 255);
-  ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
 }
 

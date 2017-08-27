@@ -10,7 +10,7 @@ void ofApp::setup() {
   
   scene_.setup();
   app_time_.setup();
-  for (int i = 0; i < 1000; i++) {
+  for (int i = 0; i < 800; i++) {
     float amp = 0.0;
     float angle = ofRandom(0.0, 2 * PI);
     ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
@@ -27,6 +27,7 @@ void ofApp::setup() {
   }
   
   // super
+  {
   float amp = 10.0;
   float angle = ofRandom(0.0, 2 * PI);
   ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
@@ -39,6 +40,30 @@ void ofApp::setup() {
   Sphere s = Sphere(app_time_, velocity, position, radius, mass);
   s.setSuperBall(true);
   spheres_.push_back(s);
+  }
+
+  // super (heavy)
+  int array = 4;
+  for (int i = 1; i <= array; i++) {
+  for (int j = 1; j <= array; j++) {
+  float amp = 00.0;
+  float angle = ofRandom(0.0, 2 * PI);
+  ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
+  ofVec2f position = ofVec2f(ofGetWidth() /
+                                static_cast<float>(PX_PER_METER) *
+                                static_cast<float>(i) /
+                                static_cast<float>(array + 1),
+                             ofGetHeight() /
+                                static_cast<float>(PX_PER_METER) *
+                                static_cast<float>(j) /
+                                static_cast<float>(array + 1));
+  float radius = 0.5;  //m
+  float mass = radius * radius * 100000000000.0;  // kg
+  Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+  s.setSuperBall(true);
+  spheres_.push_back(s);
+  }
+  }
 }
 
 //--------------------------------------------------------------

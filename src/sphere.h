@@ -35,6 +35,7 @@ class Sphere {
   ofVec2f getPosition() const { return position_; }
   float getRadius() const { return radius_; }
   float getMass() const {return mass_; }
+  bool getSuperBall() const { return super_ball_flag_; }
 
  private:
   void updateForce();

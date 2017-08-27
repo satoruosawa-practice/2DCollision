@@ -11,6 +11,7 @@
 float Collision::cor_ = 0.0;
 
 void Collision::circles(Sphere * sphere_a, Sphere * sphere_b) {
+  exception(*sphere_a, *sphere_b);
   ofVec2f velocity_a = sphere_a->getVelocity();
   ofVec2f pos_a = sphere_a->getPosition();
   float radius_a = sphere_a->getRadius();
@@ -41,5 +42,13 @@ void Collision::circles(Sphere * sphere_a, Sphere * sphere_b) {
     sphere_b->setPosition(pos_b);
     sphere_a->setVelocity(velocity_a);
     sphere_b->setVelocity(velocity_b);
+  }
+}
+
+void Collision::exception(const Sphere &sphere_a, const Sphere &sphere_b) {
+  if(sphere_a.getSuperBall() && sphere_b.getSuperBall()) {
+    cor_ = 1.0;
+  } else {
+    cor_ = 0.0;
   }
 }

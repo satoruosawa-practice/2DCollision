@@ -17,5 +17,6 @@ class Collision {
 
  private:
   Collision();
+  static void exception(const Sphere &sphere_a, const Sphere &sphere_b);
   static float cor_;  // coefficient of restitution
 };
