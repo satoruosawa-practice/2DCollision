@@ -8,7 +8,7 @@
 
 #include "collision.h"
 
-float Collision::cor_ = 1.0;
+float Collision::cor_ = 0.0;
 
 void Collision::circles(Sphere * sphere_a, Sphere * sphere_b) {
   ofVec2f velocity_a = sphere_a->getVelocity();
@@ -34,8 +34,8 @@ void Collision::circles(Sphere * sphere_a, Sphere * sphere_b) {
                   cor_ * mass_a * velo_diff * N_a_to_b) /
                   (mass_a + mass_b);
     float buried_amount = radius_a + radius_b - pos_a_to_b.length();
-    pos_a += -N_a_to_b * buried_amount * 0.5;
-    pos_b += N_a_to_b * buried_amount * 0.5;
+    pos_a += -N_a_to_b * buried_amount * mass_b / (mass_a + mass_b);
+    pos_b += N_a_to_b * buried_amount * mass_a / (mass_a + mass_b);
     
     sphere_a->setPosition(pos_a);
     sphere_b->setPosition(pos_b);

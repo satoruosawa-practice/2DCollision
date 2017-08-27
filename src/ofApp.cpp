@@ -5,34 +5,33 @@ void ofApp::setup() {
     ofSetFrameRate(60);
 //  ofSetVerticalSync(false);
 //  ofSetFrameRate(0);
-  ofBackground(63);
+  ofBackground(220);
   
   scene_.setup();
   app_time_.setup();
-  for (int i = 0; i < 100; i++) {
-    ofVec2f velocity = 3.0 * ofVec2f(ofRandom(-0.0, 0.0),
-                                     ofRandom(-0.0, 0.0));
+  for (int i = 0; i < 1000; i++) {
+    ofVec2f velocity = 3.0 * ofVec2f(0.0, 0.0);
     ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
                                         static_cast<float>(PX_PER_METER)),
                                ofRandom(ofGetHeight() /
                                         static_cast<float>(PX_PER_METER)));
-    float radius = ofRandom(0.01, 0.1);  // m
+    float radius = ofRandom(0.05, 0.1);  // m
 //    float radius = 0.2;  // m
 //    float mass = ofRandom(1.0, 10.0);
-    float mass = radius * 100.0;  // kg
+    float mass = radius * radius * 10000.0;  // kg
     Sphere s = Sphere(app_time_, velocity, position, radius, mass);
     spheres_.push_back(s);
   }
   
   // super
-  ofVec2f velocity = 10.0 * ofVec2f(ofRandom(-1.0, 1.0),
-                                    ofRandom(-1.0, 1.0));
+  float angle = ofRandom(0.0, 2 * PI);
+  ofVec2f velocity = 10.0 * ofVec2f(1.0 * cos(angle), 1.0 * sin(angle));
   ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
                                       static_cast<float>(PX_PER_METER)),
                              ofRandom(ofGetHeight() /
                                       static_cast<float>(PX_PER_METER)));
   float radius = 0.2;  //m
-  float mass = radius * 1000.0;  // kg
+  float mass = radius * radius * 100000000.0;  // kg
   Sphere s = Sphere(app_time_, velocity, position, radius, mass);
   spheres_.push_back(s);
 }
@@ -57,11 +56,11 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-  ofDrawGrid(PX_PER_METER, 11, false, false, false, true);
+//  ofDrawGrid(PX_PER_METER, 11, false, false, false, true);
   for (Sphere &s : spheres_){
     s.draw();
   }
-
+  ofSetColor(10, 10, 10, 255);
   ofDrawBitmapString("frameRate: " + ofToString(ofGetFrameRate(), 1) + " fps",
                      10, 20);
   ofDrawBitmapString("time: " + ofToString(app_time_.getElapsedTimeS(), 1) +

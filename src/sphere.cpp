@@ -48,6 +48,12 @@ void Sphere::updatePos() {
 }
 
 void Sphere::draw() {
+  ofEnableSmoothing();
+//  ofFill();
+//  ofSetColor(10, 10, 10, 255);
+//  ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER - 2);
+  ofNoFill();
+  ofSetColor(10, 10, 10, 255);
   ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
 }
 
