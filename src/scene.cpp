@@ -17,7 +17,7 @@ void Scene::updateSingle(Sphere * sphere) {
   float r = sphere->getRadius() * PX_PER_METER;
   ofVec2f p = sphere->getPosition() * PX_PER_METER;
   ofVec2f v = sphere->getVelocity() * PX_PER_METER;
-  WallBehavior::passing(r, &p, &v);
+  WallBehavior::bounce(r, &p, &v);
   sphere->setVelocity(v / static_cast<float>(PX_PER_METER));
   sphere->setPosition(p / static_cast<float>(PX_PER_METER));
 }
