@@ -10,60 +10,19 @@ void ofApp::setup() {
   
   scene_.setup();
   app_time_.setup();
-  for (int i = 0; i < 800; i++) {
-    float amp = 0.0;
+  for (int i = 0; i < 100; i++) {
+    float amp = 1.0;  // m
     float angle = ofRandom(0.0, 2 * PI);
     ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
     ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
                                         static_cast<float>(PX_PER_METER)),
                                ofRandom(ofGetHeight() /
                                         static_cast<float>(PX_PER_METER)));
-    float radius = ofRandom(0.02, 0.05);  // m
-//    float radius = 0.2;  // m
-//    float mass = ofRandom(1.0, 10.0);
-    float mass = radius * radius * 10000.0;  // kg
+    float radius = ofRandom(0.05, 0.2);  // m
+    float mass = radius * radius * 100.0;  // kg
     Sphere s = Sphere(app_time_, velocity, position, radius, mass);
     spheres_.push_back(s);
   }
-  
-//   super
-  {
-  float amp = 10.0;
-  float angle = ofRandom(0.0, 2 * PI);
-  ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
-  ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
-                                      static_cast<float>(PX_PER_METER)),
-                             ofRandom(ofGetHeight() /
-                                      static_cast<float>(PX_PER_METER)));
-  float radius = 0.5;  //m
-  float mass = radius * radius * 1000000.0;  // kg
-  Sphere s = Sphere(app_time_, velocity, position, radius, mass);
-  s.setSuperBall(true);
-  spheres_.push_back(s);
-  }
-
-//  // super (heavy)
-//  int array = 4;
-//  for (int i = 1; i <= array; i++) {
-//  for (int j = 1; j <= array; j++) {
-//  float amp = 0.0;
-//  float angle = ofRandom(0.0, 2 * PI);
-//  ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
-//  ofVec2f position = ofVec2f(ofGetWidth() /
-//                                static_cast<float>(PX_PER_METER) *
-//                                static_cast<float>(i) /
-//                                static_cast<float>(array + 1),
-//                             ofGetHeight() /
-//                                static_cast<float>(PX_PER_METER) *
-//                                static_cast<float>(j) /
-//                                static_cast<float>(array + 1));
-//  float radius = 0.2;  //m
-//  float mass = radius * radius * 1000000.0;  // kg
-//  Sphere s = Sphere(app_time_, velocity, position, radius, mass);
-//  s.setSuperBall(true);
-//  spheres_.push_back(s);
-//  }
-//  }
 }
 
 //--------------------------------------------------------------

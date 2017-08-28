@@ -18,7 +18,6 @@ Sphere::Sphere(const AppTime &app_time,
   mass_ = mass;
   damping_ = 0.0;
   reset(position, velocity);
-  super_ball_flag_ = false;
 }
 
 void Sphere::reset(const ofVec2f &velocity, const ofVec2f &position) {
@@ -38,7 +37,7 @@ void Sphere::resetForce() {
 }
 
 void Sphere::updateForce() {
-  force_ += ofVec2f(0.0, GRAVITY) * mass_;
+//  force_ += ofVec2f(0.0, GRAVITY) * mass_;
   force_ += -velocity_ * damping_;
 }
 
@@ -49,19 +48,8 @@ void Sphere::updatePos() {
 }
 
 void Sphere::draw() {
-  if(super_ball_flag_) {
     ofFill();
-    ofSetLineWidth(0.0);
-    ofSetColor(10, 10, 10, 10);
+    ofSetColor(10, 10, 10, 255);
     ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
-    ofSetLineWidth(0.0);
-    ofSetColor(10, 10, 10, 255);
-    ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER - 10);
-  } else {
-    ofFill();
-    ofSetLineWidth(0.0);
-    ofSetColor(10, 10, 10, 255);
-    ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER + 3);
-  }
 }
 

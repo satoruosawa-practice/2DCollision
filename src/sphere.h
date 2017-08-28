@@ -29,13 +29,11 @@ class Sphere {
   // setter
   void setVelocity(const ofVec2f &v) { velocity_ = v; }
   void setPosition(const ofVec2f &p) { position_ = p; }
-  void setSuperBall(bool f) { super_ball_flag_ = f; }
   // getter
   ofVec2f getVelocity() const { return velocity_; }
   ofVec2f getPosition() const { return position_; }
   float getRadius() const { return radius_; }
   float getMass() const {return mass_; }
-  bool getSuperBall() const { return super_ball_flag_; }
 
  private:
   void updateForce();
@@ -49,6 +47,4 @@ class Sphere {
   float radius_;  // m
   float mass_;  // kg
   float damping_;
-  
-  bool super_ball_flag_;
 };
