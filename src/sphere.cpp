@@ -16,8 +16,9 @@ Sphere::Sphere(const AppTime &app_time,
   app_time_ = &app_time;
   radius_ = radius;
   mass_ = mass;
-  damping_ = 0.0;
+  damping_ = 0.05;
   reset(position, velocity);
+  color_ = ofColor(10, 10, 10, 255);
 }
 
 void Sphere::reset(const ofVec2f &velocity, const ofVec2f &position) {
@@ -48,8 +49,8 @@ void Sphere::updatePos() {
 }
 
 void Sphere::draw() {
-    ofFill();
-    ofSetColor(10, 10, 10, 255);
-    ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
+  ofFill();
+  ofSetColor(color_);
+  ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
 }
 

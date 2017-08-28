@@ -5,24 +5,66 @@ void ofApp::setup() {
     ofSetFrameRate(60);
 //  ofSetVerticalSync(false);
 //  ofSetFrameRate(0);
-  ofBackground(220);
+  ofBackground(255);
   ofEnableSmoothing();
   
   scene_.setup();
   app_time_.setup();
-  for (int i = 0; i < 100; i++) {
-    float amp = 1.0;  // m
-    float angle = ofRandom(0.0, 2 * PI);
-    ofVec2f velocity = amp * ofVec2f(cos(angle), sin(angle));
-    ofVec2f position = ofVec2f(ofRandom(ofGetWidth() /
-                                        static_cast<float>(PX_PER_METER)),
-                               ofRandom(ofGetHeight() /
-                                        static_cast<float>(PX_PER_METER)));
-    float radius = ofRandom(0.05, 0.2);  // m
-    float mass = radius * radius * 100.0;  // kg
-    Sphere s = Sphere(app_time_, velocity, position, radius, mass);
-    spheres_.push_back(s);
+  int array = 15;
+  for (int i = 0; i < array; i++) {
+    for (int j = 0; j < array; j++) {
+      float radius = 0.01;  // m
+      ofVec2f velocity = ofVec2f(0.0, 0.0);
+      ofVec2f position = ofVec2f(radius * 2.0 * static_cast<float>(i) + 1.0,
+                                 radius * 2.0 * static_cast<float>(j) + 1.0);
+      float mass = radius * radius * radius * 10000.0;  // kg
+      Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+      s.setColor(ofColor(229, 57, 53, 255));
+      spheres_.push_back(s);
+    }
   }
+  for (int i = 0; i < array; i++) {
+    for (int j = 0; j < array; j++) {
+      float radius = 0.01;  // m
+      ofVec2f velocity = ofVec2f(0.0, 0.0);
+      ofVec2f position = ofVec2f(radius * 2.0 * static_cast<float>(i) + 1.3,
+                                 radius * 2.0 * static_cast<float>(j) + 1.0);
+      float mass = radius * radius * radius * 10000.0;  // kg
+      Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+      s.setColor(ofColor(30, 136, 229, 255));
+      spheres_.push_back(s);
+    }
+  }
+  for (int i = 0; i < array; i++) {
+    for (int j = 0; j < array; j++) {
+      float radius = 0.01;  // m
+      ofVec2f velocity = ofVec2f(0.0, 0.0);
+      ofVec2f position = ofVec2f(radius * 2.0 * static_cast<float>(i) + 1.0,
+                                 radius * 2.0 * static_cast<float>(j) + 1.3);
+      float mass = radius * radius * radius * 10000.0;  // kg
+      Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+      s.setColor(ofColor(124, 179, 66, 255));
+      spheres_.push_back(s);
+    }
+  }
+  for (int i = 0; i < array; i++) {
+    for (int j = 0; j < array; j++) {
+      float radius = 0.01;  // m
+      ofVec2f velocity = ofVec2f(0.0, 0.0);
+      ofVec2f position = ofVec2f(radius * 2.0 * static_cast<float>(i) + 1.3,
+                                 radius * 2.0 * static_cast<float>(j) + 1.3);
+      float mass = radius * radius * radius * 10000.0;  // kg
+      Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+      s.setColor(ofColor(253, 216, 53, 255));
+      spheres_.push_back(s);
+    }
+  }
+  float radius = 0.3;  // m
+  ofVec2f velocity = ofVec2f(1.0, 1.0);
+  ofVec2f position = ofVec2f(5.0, 5.0);
+  float mass = radius * radius * radius * 300.0;  // kg
+  Sphere s = Sphere(app_time_, velocity, position, radius, mass);
+  spheres_.push_back(s);
 }
 
 //--------------------------------------------------------------

@@ -29,6 +29,7 @@ class Sphere {
   // setter
   void setVelocity(const ofVec2f &v) { velocity_ = v; }
   void setPosition(const ofVec2f &p) { position_ = p; }
+  void setColor(const ofColor &c) { color_ = c; }
   // getter
   ofVec2f getVelocity() const { return velocity_; }
   ofVec2f getPosition() const { return position_; }
@@ -47,4 +48,6 @@ class Sphere {
   float radius_;  // m
   float mass_;  // kg
   float damping_;
+
+  ofColor color_;
 };
