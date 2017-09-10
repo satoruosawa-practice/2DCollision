@@ -87,7 +87,7 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-//  ofDrawGrid(PX_PER_METER, 11, false, false, false, true);
+//  ofDrawGrid(kPxPerMeter, 11, false, false, false, true);
   for (Sphere &s : spheres_){
     s.draw();
   }

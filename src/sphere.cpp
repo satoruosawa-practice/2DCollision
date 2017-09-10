@@ -38,7 +38,7 @@ void Sphere::resetForce() {
 }
 
 void Sphere::updateForce() {
-//  force_ += ofVec2f(0.0, GRAVITY) * mass_;
+//  force_ += ofVec2f(0.0, kGravity) * mass_;
   force_ += -velocity_ * damping_;
 }
 
@@ -51,6 +51,6 @@ void Sphere::updatePos() {
 void Sphere::draw() {
   ofFill();
   ofSetColor(color_);
-  ofDrawCircle(position_ * PX_PER_METER, radius_ * PX_PER_METER);
+  ofDrawCircle(position_ * kPxPerMeter, radius_ * kPxPerMeter);
 }
 

@@ -14,12 +14,12 @@ void Scene::setup() {
 
 void Scene::updateSingle(Sphere * sphere) {
   // bounce of walls
-  float r = sphere->getRadius() * PX_PER_METER;
-  ofVec2f p = sphere->getPosition() * PX_PER_METER;
-  ofVec2f v = sphere->getVelocity() * PX_PER_METER;
+  float r = sphere->getRadius() * kPxPerMeter;
+  ofVec2f p = sphere->getPosition() * kPxPerMeter;
+  ofVec2f v = sphere->getVelocity() * kPxPerMeter;
   WallBehavior::bounce(r, &p, &v);
-  sphere->setVelocity(v / static_cast<float>(PX_PER_METER));
-  sphere->setPosition(p / static_cast<float>(PX_PER_METER));
+  sphere->setVelocity(v / static_cast<float>(kPxPerMeter));
+  sphere->setPosition(p / static_cast<float>(kPxPerMeter));
 }
 
 void Scene::updateMutual(Sphere * sphere_a, Sphere * sphere_b) {
