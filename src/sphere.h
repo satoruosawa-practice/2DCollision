@@ -20,11 +20,8 @@ class Sphere {
                   const ofVec2f &position,
                   const float &radius,
                   const float &mass);
-  void reset(const ofVec2f &velocity,
-             const ofVec2f &position);
   void update();
   void draw();
-  void resetForce();
   void addForce(const ofVec2f &f) {force_ += f; }
   // setter
   void setVelocity(const ofVec2f &v) { velocity_ = v; }
@@ -37,6 +34,7 @@ class Sphere {
   float getMass() const {return mass_; }
 
  private:
+  void resetForce();
   void updateForce();
   void updatePos();
   const AppTime * app_time_;

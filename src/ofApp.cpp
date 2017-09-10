@@ -71,7 +71,6 @@ void ofApp::setup() {
 void ofApp::update() {
   app_time_.update();
   for (Sphere &s : spheres_) {
-    s.resetForce();
     s.update();
   }
   for (Sphere &s : spheres_) {
