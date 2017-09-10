@@ -10,8 +10,11 @@
 		8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0C41EFFD90700E663BE /* app_time.cpp */; };
 		8728A0C91EFFD90700E663BE /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0C61EFFD90700E663BE /* sphere.cpp */; };
 		8728A0D61EFFE93900E663BE /* wall_behavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D41EFFE93900E663BE /* wall_behavior.cpp */; };
-		8728A0DA1EFFEAA000E663BE /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D81EFFEAA000E663BE /* scene.cpp */; };
+		8728A0DA1EFFEAA000E663BE /* scenea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D81EFFEAA000E663BE /* scenea.cpp */; };
 		8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0DE1EFFFC5500E663BE /* collision.cpp */; };
+		876A96E61F657674004C06C6 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96E41F657674004C06C6 /* scene.cpp */; };
+		876A96E91F6576E4004C06C6 /* circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96E71F6576E4004C06C6 /* circle.cpp */; };
+		876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96EA1F65792C004C06C6 /* abstract_object.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -54,10 +57,16 @@
 		8728A0C71EFFD90700E663BE /* sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
 		8728A0D41EFFE93900E663BE /* wall_behavior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wall_behavior.cpp; sourceTree = "<group>"; };
 		8728A0D51EFFE93900E663BE /* wall_behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wall_behavior.h; sourceTree = "<group>"; };
-		8728A0D81EFFEAA000E663BE /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
-		8728A0D91EFFEAA000E663BE /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
+		8728A0D81EFFEAA000E663BE /* scenea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scenea.cpp; sourceTree = "<group>"; };
+		8728A0D91EFFEAA000E663BE /* scenea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scenea.h; sourceTree = "<group>"; };
 		8728A0DE1EFFFC5500E663BE /* collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collision.cpp; sourceTree = "<group>"; };
 		8728A0DF1EFFFC5500E663BE /* collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collision.h; sourceTree = "<group>"; };
+		876A96E41F657674004C06C6 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		876A96E51F657674004C06C6 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
+		876A96E71F6576E4004C06C6 /* circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
+		876A96E81F6576E4004C06C6 /* circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circle.h; sourceTree = "<group>"; };
+		876A96EA1F65792C004C06C6 /* abstract_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstract_object.cpp; sourceTree = "<group>"; };
+		876A96EB1F65792C004C06C6 /* abstract_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstract_object.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* 2DCollisionDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2DCollisionDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
@@ -90,8 +99,8 @@
 		8728A0D71EFFEA8900E663BE /* scene */ = {
 			isa = PBXGroup;
 			children = (
-				8728A0D81EFFEAA000E663BE /* scene.cpp */,
-				8728A0D91EFFEAA000E663BE /* scene.h */,
+				8728A0D81EFFEAA000E663BE /* scenea.cpp */,
+				8728A0D91EFFEAA000E663BE /* scenea.h */,
 				8728A0D41EFFE93900E663BE /* wall_behavior.cpp */,
 				8728A0D51EFFE93900E663BE /* wall_behavior.h */,
 				8728A0DE1EFFFC5500E663BE /* collision.cpp */,
@@ -134,6 +143,12 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				876A96E51F657674004C06C6 /* scene.h */,
+				876A96E41F657674004C06C6 /* scene.cpp */,
+				876A96EB1F65792C004C06C6 /* abstract_object.h */,
+				876A96EA1F65792C004C06C6 /* abstract_object.cpp */,
+				876A96E81F6576E4004C06C6 /* circle.h */,
+				876A96E71F6576E4004C06C6 /* circle.cpp */,
 				8728A0C71EFFD90700E663BE /* sphere.h */,
 				8728A0C61EFFD90700E663BE /* sphere.cpp */,
 				8728A0D71EFFEA8900E663BE /* scene */,
@@ -240,12 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876A96E61F657674004C06C6 /* scene.cpp in Sources */,
 				8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */,
 				8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */,
+				876A96E91F6576E4004C06C6 /* circle.cpp in Sources */,
+				876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				8728A0C91EFFD90700E663BE /* sphere.cpp in Sources */,
 				8728A0D61EFFE93900E663BE /* wall_behavior.cpp in Sources */,
-				8728A0DA1EFFEAA000E663BE /* scene.cpp in Sources */,
+				8728A0DA1EFFEAA000E663BE /* scenea.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

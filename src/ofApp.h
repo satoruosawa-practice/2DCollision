@@ -1,10 +1,13 @@
 #pragma once
 
 #include "ofMain.h"
-#include "./global_definition.h"
+//#include "./global_definition.h"
 #include "./app_time.h"
+//#include "./scene.h"
+//#include "./sphere.h"
+
 #include "./scene.h"
-#include "./sphere.h"
+
 
 class ofApp : public ofBaseApp{
  public:
@@ -25,6 +28,8 @@ class ofApp : public ofBaseApp{
   void gotMessage(ofMessage msg);
 
   AppTime app_time_;
+//  Scene scene_;
+//  vector<Sphere> spheres_;
+  
   Scene scene_;
-  vector<Sphere> spheres_;
 };

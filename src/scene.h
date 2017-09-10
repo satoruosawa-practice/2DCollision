@@ -2,24 +2,27 @@
 //  scene.h
 //  2DCollision
 //
-//  Created by OSAWASatoru on 6/25/17.
+//  Created by OSAWASatoru on 2017/09/10.
 //
 //
 
 #pragma once
 
 #include "ofMain.h"
-#include "./wall_behavior.h"
-#include "collision.h"
-#include "./sphere.h"
+#include "./global_definition.h"
+#include "./app_time.h"
+#include "./circle.h"
+
 
 class Scene {
- public:
-  void setup();
-  void updateSingle(Sphere * s);
-  void updateMutual(Sphere * sphere_a, Sphere * sphere_b);
-
- private:
-//  BounceOfWalls bounce_of_walls_;
-//  Collision collision_;
+public:
+  
+  void setup(const AppTime &app_time);
+  void update();
+  void draw();
+  
+private:
+  const AppTime * app_time_;
+  vector<AbstractObject*> object_container_;
 };
+

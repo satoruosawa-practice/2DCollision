@@ -2,26 +2,31 @@
 //  scene.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 6/25/17.
+//  Created by OSAWASatoru on 2017/09/10.
 //
 //
 
-#include "./scene.h"
+#include "scene.h"
 
-void Scene::setup() {
-  
+void Scene::setup(const AppTime &app_time) {
+  app_time_ = &app_time;
+ 
+  float radius = 0.3;  // m
+  ofVec2f velocity = ofVec2f(1.0, 1.0);
+  ofVec2f position = ofVec2f(5.0, 5.0);
+  float mass = radius * radius * radius * 300.0;  // kg
+  AbstractObject * c = new Circle(app_time, velocity, position, radius, mass);
+  object_container_.push_back(c);
+
 }
-
-void Scene::updateSingle(Sphere * sphere) {
-  // bounce of walls
-  float r = sphere->getRadius() * kPxPerMeter;
-  ofVec2f p = sphere->getPosition() * kPxPerMeter;
-  ofVec2f v = sphere->getVelocity() * kPxPerMeter;
-  WallBehavior::bounce(r, &p, &v);
-  sphere->setVelocity(v / static_cast<float>(kPxPerMeter));
-  sphere->setPosition(p / static_cast<float>(kPxPerMeter));
+void Scene::update() {
+  for (auto &o : object_container_) {
+    o->update();
+  }
+  object_container_.front()->update();
 }
-
-void Scene::updateMutual(Sphere * sphere_a, Sphere * sphere_b) {
-  Collision::circles(sphere_a, sphere_b);
+void Scene::draw() {
+  for (auto &o : object_container_){
+    o->draw();
+  }
 }
