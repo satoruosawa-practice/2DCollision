@@ -11,7 +11,7 @@
 #include "ofMain.h"
 #include "./global_definition.h"
 #include "./app_time.h"
-#include "abstract_object.h"
+#include "./abstract_object.h"
 
 class Circle : public AbstractObject {
  public:
@@ -21,14 +21,13 @@ class Circle : public AbstractObject {
          const float &radius,
          const float &mass);
   void draw();
+  float radius() const { return radius_; }
 
  protected:
   void resetForce();
   void updateForce();
   void updatePos();
 
-  ofVec2f position_;  // m
-  ofVec2f velocity_;  // m/s
   ofVec2f force_;  // N
   float radius_;  // m
   float mass_;  // kg

@@ -22,7 +22,7 @@ Circle::Circle(const AppTime &app_time,
   color_ = ofColor(10, 10, 10, 255);
   resetForce();
 }
-//
+
 void Circle::updateForce() {
   resetForce();
 //  force_ += ofVec2f(0.0, kGravity) * mass_;
