@@ -10,13 +10,10 @@
 
 #include "ofMain.h"
 #include "./global_definition.h"
-#include "./app_time.h"
-#include "./abstract_field_collision.h"
-#include "circle.h"
+#include "./circle.h"
 
 class CircleBounceOnFrame : public AbstractFieldCollision {
  public:
-  explicit CircleBounceOnFrame(const AppTime &app_time,
-                  Circle &object);
+  explicit CircleBounceOnFrame(Circle &object);
   virtual void update();
 };

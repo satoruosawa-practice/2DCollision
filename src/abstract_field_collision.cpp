@@ -8,8 +8,6 @@
 
 #include "abstract_field_collision.h"
 
-AbstractFieldCollision::AbstractFieldCollision(const AppTime &app_time,
-                                               AbstractObject &object) {
-  app_time_ = &app_time;
+AbstractFieldCollision::AbstractFieldCollision(AbstractObject &object) {
   object_ = &object;
 }

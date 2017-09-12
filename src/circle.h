@@ -27,7 +27,6 @@ class Circle : public AbstractObject {
   void resetForce();
   void updateForce();
   void updatePos();
-
   ofVec2f force_;  // N
   float radius_;  // m
   float mass_;  // kg
