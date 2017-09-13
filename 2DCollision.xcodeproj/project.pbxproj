@@ -14,6 +14,7 @@
 		8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0DE1EFFFC5500E663BE /* collision.cpp */; };
 		873EF9741F681E2300235230 /* abstract_field_collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF9721F681E2300235230 /* abstract_field_collision.cpp */; };
 		873EF9771F6820F800235230 /* circle_bounce_on_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF9751F6820F800235230 /* circle_bounce_on_frame.cpp */; };
+		873EF97C1F69F0E600235230 /* circle_passing_on_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF97A1F69F0E600235230 /* circle_passing_on_frame.cpp */; };
 		876A96E61F657674004C06C6 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96E41F657674004C06C6 /* scene.cpp */; };
 		876A96E91F6576E4004C06C6 /* circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96E71F6576E4004C06C6 /* circle.cpp */; };
 		876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96EA1F65792C004C06C6 /* abstract_object.cpp */; };
@@ -67,6 +68,8 @@
 		873EF9731F681E2300235230 /* abstract_field_collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstract_field_collision.h; sourceTree = "<group>"; };
 		873EF9751F6820F800235230 /* circle_bounce_on_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle_bounce_on_frame.cpp; sourceTree = "<group>"; };
 		873EF9761F6820F800235230 /* circle_bounce_on_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circle_bounce_on_frame.h; sourceTree = "<group>"; };
+		873EF97A1F69F0E600235230 /* circle_passing_on_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle_passing_on_frame.cpp; sourceTree = "<group>"; };
+		873EF97B1F69F0E600235230 /* circle_passing_on_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circle_passing_on_frame.h; sourceTree = "<group>"; };
 		876A96E41F657674004C06C6 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		876A96E51F657674004C06C6 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		876A96E71F6576E4004C06C6 /* circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				873EF9721F681E2300235230 /* abstract_field_collision.cpp */,
 				873EF9761F6820F800235230 /* circle_bounce_on_frame.h */,
 				873EF9751F6820F800235230 /* circle_bounce_on_frame.cpp */,
+				873EF97B1F69F0E600235230 /* circle_passing_on_frame.h */,
+				873EF97A1F69F0E600235230 /* circle_passing_on_frame.cpp */,
 			);
 			name = field_collision;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				873EF9771F6820F800235230 /* circle_bounce_on_frame.cpp in Sources */,
 				8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */,
 				873EF9741F681E2300235230 /* abstract_field_collision.cpp in Sources */,
+				873EF97C1F69F0E600235230 /* circle_passing_on_frame.cpp in Sources */,
 				8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */,
 				876A96E91F6576E4004C06C6 /* circle.cpp in Sources */,
 				876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */,

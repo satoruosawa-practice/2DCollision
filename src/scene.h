@@ -13,6 +13,7 @@
 #include "./app_time.h"
 #include "./circle.h"
 #include "./circle_bounce_on_frame.h"
+#include "./circle_passing_on_frame.h"
 
 
 class Scene {

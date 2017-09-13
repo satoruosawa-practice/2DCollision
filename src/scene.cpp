@@ -15,7 +15,8 @@ void Scene::setup(const AppTime &app_time) {
   ofVec2f position = ofVec2f(5.0, 5.0);
   float mass = radius * radius * radius * 300.0;  // kg
   Circle * c = new Circle(app_time, velocity, position, radius, mass);
-  CircleBounceOnFrame * b = new CircleBounceOnFrame(*c);
+  CirclePassingOnFrame * b = new CirclePassingOnFrame(*c);
+//  CircleBounceOnFrame * b = new CircleBounceOnFrame(*c);
   c->setFieldCollision(b);
   object_container_.push_back(c);
 }
