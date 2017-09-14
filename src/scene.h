@@ -14,6 +14,7 @@
 #include "./circle.h"
 #include "./circle_bounce_on_frame.h"
 #include "./circle_passing_on_frame.h"
+#include "mutual_collision.h"
 
 
 class Scene {
@@ -25,5 +26,7 @@ class Scene {
  private:
   const AppTime * app_time_;
   vector<AbstractObject*> object_container_;
+  vector<AbstractFieldCollision*> field_collision_container_;
+
 };
 

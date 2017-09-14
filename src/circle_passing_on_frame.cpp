@@ -8,20 +8,16 @@
 
 #include "./circle_passing_on_frame.h"
 
-CirclePassingOnFrame::CirclePassingOnFrame(Circle &object)
-: AbstractFieldCollision(object) {}
-
-
-void CirclePassingOnFrame::update() {
+void CirclePassingOnFrame::update(AbstractObject * object) {
   float cor = 1.0;
-  float radius = dynamic_cast<Circle*>(object_)->radius();
+  float radius = dynamic_cast<Circle*>(object)->radius();
   float xmin = radius;
   float xmax = ofGetWidth() / static_cast<float>(kPxPerMeter) - radius;
   float ymin = radius;
   float ymax = ofGetHeight() / static_cast<float>(kPxPerMeter) - radius;
   
-  ofVec2f * p_velocity = object_->pVelocity();
-  ofVec2f * p_position = object_->pPosition();
+  ofVec2f * p_velocity = object->pVelocity();
+  ofVec2f * p_position = object->pPosition();
   if (p_position->x < xmin) {
     p_velocity->x *= cor;
     p_position->x = xmax - (xmin - p_position->x);

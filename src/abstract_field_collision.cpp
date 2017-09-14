@@ -7,7 +7,3 @@
 //
 
 #include "abstract_field_collision.h"
-
-AbstractFieldCollision::AbstractFieldCollision(AbstractObject &object) {
-  object_ = &object;
-}

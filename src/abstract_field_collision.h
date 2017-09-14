@@ -12,13 +12,7 @@
 #include "./global_definition.h"
 #include "./abstract_object.h"
 
-class AbstractObject;
-
 class AbstractFieldCollision {
  public:
-  explicit AbstractFieldCollision(AbstractObject &object);
-  virtual void update() = 0;
-
- protected:
-  AbstractObject * object_;
+  virtual void update(AbstractObject * object) = 0;
 };

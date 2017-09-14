@@ -15,6 +15,7 @@
 
 class Circle : public AbstractObject {
  public:
+  Circle() = default;
   Circle(const AppTime &app_time,
          const ofVec2f &velocity,
          const ofVec2f &position,

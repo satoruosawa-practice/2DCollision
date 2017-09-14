@@ -10,10 +10,10 @@
 
 #include "ofMain.h"
 #include "./global_definition.h"
+#include "./abstract_field_collision.h"
 #include "./circle.h"
 
 class CircleBounceOnFrame : public AbstractFieldCollision {
  public:
-  explicit CircleBounceOnFrame(Circle &object);
-  virtual void update();
+  void update(AbstractObject * object);
 };
