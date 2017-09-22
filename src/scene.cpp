@@ -18,9 +18,9 @@ void Scene::setup(const AppTime &app_time) {
   object_container_.push_back(c);
   Circle * c2 = new Circle(app_time, velocity * 0.1, position, radius, mass);
   object_container_.push_back(c2);
-  
-//  CircleBounceOnFrame * b = new CircleBounceOnFrame();
-  CirclePassingOnFrame * b = new CirclePassingOnFrame();
+
+  CircleBounceOnFrame * b = new CircleBounceOnFrame();
+//  CirclePassingOnFrame * b = new CirclePassingOnFrame();
   field_collision_container_.push_back(b);
 }
 
@@ -36,7 +36,6 @@ void Scene::update() {
       MutualCollision::collision(object_container_[i], object_container_[j]);
     }
   }
-
 }
 
 void Scene::draw() {

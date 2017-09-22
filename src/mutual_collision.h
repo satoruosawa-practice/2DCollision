@@ -17,6 +17,9 @@
 class MutualCollision {
  public:
   static void collision(AbstractObject * object_a, AbstractObject * object_b);
-  static void circles(Circle * object_a, Circle * object_b);
-};
 
+ private:
+  static void circles(Circle * circle_a, Circle * circle_b);
+  static const string circle_type_;
+  static float cor_;
+};

@@ -44,4 +44,3 @@ void Circle::draw() {
   ofSetColor(color_);
   ofDrawCircle(position_ * kPxPerMeter, radius_ * kPxPerMeter);
 }
-

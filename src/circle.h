@@ -23,6 +23,7 @@ class Circle : public AbstractObject {
          const float &mass);
   void draw();
   float radius() const { return radius_; }
+  float mass() const { return mass_; }
 
  protected:
   void resetForce();
