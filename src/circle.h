@@ -33,5 +33,4 @@ class Circle : public AbstractObject {
   float radius_;  // m
   float mass_;  // kg
 //  float damping_;
-  ofColor color_;
 };

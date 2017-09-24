@@ -24,6 +24,7 @@ class AbstractObject {
   ofVec2f velocity() const { return velocity_; }
   void position(const ofVec2f &p) { position_ = p; }
   void velocity(const ofVec2f &v) { velocity_ = v; }
+  void color(const ofColor &c) { color_ = c; }
 
  protected:
   virtual void updateForce() = 0;
@@ -31,4 +32,5 @@ class AbstractObject {
   const AppTime * app_time_;
   ofVec2f position_;  // m
   ofVec2f velocity_;  // m/s
+  ofColor color_;
 };
