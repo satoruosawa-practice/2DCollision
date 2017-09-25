@@ -2,8 +2,7 @@
 //  circle_passing_on_frame.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/14.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #include "./circle_passing_on_frame.h"
@@ -15,7 +14,7 @@ void CirclePassingOnFrame::update(AbstractObject * object) {
   float xmax = ofGetWidth() / static_cast<float>(kPxPerMeter) - radius;
   float ymin = radius;
   float ymax = ofGetHeight() / static_cast<float>(kPxPerMeter) - radius;
-  
+
   ofVec2f * p_velocity = object->pVelocity();
   ofVec2f * p_position = object->pPosition();
   if (p_position->x < xmin) {

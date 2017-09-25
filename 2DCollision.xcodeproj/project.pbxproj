@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0C41EFFD90700E663BE /* app_time.cpp */; };
-		8728A0C91EFFD90700E663BE /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0C61EFFD90700E663BE /* sphere.cpp */; };
-		8728A0D61EFFE93900E663BE /* wall_behavior.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D41EFFE93900E663BE /* wall_behavior.cpp */; };
-		8728A0DA1EFFEAA000E663BE /* scenea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0D81EFFEAA000E663BE /* scenea.cpp */; };
-		8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8728A0DE1EFFFC5500E663BE /* collision.cpp */; };
 		873EF9741F681E2300235230 /* abstract_field_collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF9721F681E2300235230 /* abstract_field_collision.cpp */; };
 		873EF9771F6820F800235230 /* circle_bounce_on_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF9751F6820F800235230 /* circle_bounce_on_frame.cpp */; };
 		873EF97C1F69F0E600235230 /* circle_passing_on_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF97A1F69F0E600235230 /* circle_passing_on_frame.cpp */; };
@@ -57,14 +53,6 @@
 		8728A0C01EFFD8BD00E663BE /* global_definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global_definition.h; sourceTree = "<group>"; };
 		8728A0C41EFFD90700E663BE /* app_time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = app_time.cpp; sourceTree = "<group>"; };
 		8728A0C51EFFD90700E663BE /* app_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = app_time.h; sourceTree = "<group>"; };
-		8728A0C61EFFD90700E663BE /* sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sphere.cpp; sourceTree = "<group>"; };
-		8728A0C71EFFD90700E663BE /* sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphere.h; sourceTree = "<group>"; };
-		8728A0D41EFFE93900E663BE /* wall_behavior.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wall_behavior.cpp; sourceTree = "<group>"; };
-		8728A0D51EFFE93900E663BE /* wall_behavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wall_behavior.h; sourceTree = "<group>"; };
-		8728A0D81EFFEAA000E663BE /* scenea.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scenea.cpp; sourceTree = "<group>"; };
-		8728A0D91EFFEAA000E663BE /* scenea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scenea.h; sourceTree = "<group>"; };
-		8728A0DE1EFFFC5500E663BE /* collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = collision.cpp; sourceTree = "<group>"; };
-		8728A0DF1EFFFC5500E663BE /* collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collision.h; sourceTree = "<group>"; };
 		873EF9721F681E2300235230 /* abstract_field_collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstract_field_collision.cpp; sourceTree = "<group>"; };
 		873EF9731F681E2300235230 /* abstract_field_collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstract_field_collision.h; sourceTree = "<group>"; };
 		873EF9751F6820F800235230 /* circle_bounce_on_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle_bounce_on_frame.cpp; sourceTree = "<group>"; };
@@ -106,21 +94,6 @@
 			children = (
 			);
 			name = local_addons;
-			sourceTree = "<group>";
-		};
-		8728A0D71EFFEA8900E663BE /* old */ = {
-			isa = PBXGroup;
-			children = (
-				8728A0C71EFFD90700E663BE /* sphere.h */,
-				8728A0C61EFFD90700E663BE /* sphere.cpp */,
-				8728A0D91EFFEAA000E663BE /* scenea.h */,
-				8728A0D81EFFEAA000E663BE /* scenea.cpp */,
-				8728A0D41EFFE93900E663BE /* wall_behavior.cpp */,
-				8728A0D51EFFE93900E663BE /* wall_behavior.h */,
-				8728A0DE1EFFFC5500E663BE /* collision.cpp */,
-				8728A0DF1EFFFC5500E663BE /* collision.h */,
-			);
-			name = old;
 			sourceTree = "<group>";
 		};
 		873EF9781F68250B00235230 /* object */ = {
@@ -195,7 +168,6 @@
 				873EF9781F68250B00235230 /* object */,
 				873EF9791F68251B00235230 /* field_collision */,
 				873EF9801F69F2A900235230 /* mutual_collision */,
-				8728A0D71EFFEA8900E663BE /* old */,
 				8728A0C41EFFD90700E663BE /* app_time.cpp */,
 				8728A0C51EFFD90700E663BE /* app_time.h */,
 				8728A0C01EFFD8BD00E663BE /* global_definition.h */,
@@ -305,13 +277,9 @@
 				8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */,
 				873EF9741F681E2300235230 /* abstract_field_collision.cpp in Sources */,
 				873EF97C1F69F0E600235230 /* circle_passing_on_frame.cpp in Sources */,
-				8728A0E01EFFFC5500E663BE /* collision.cpp in Sources */,
 				876A96E91F6576E4004C06C6 /* circle.cpp in Sources */,
 				876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				8728A0C91EFFD90700E663BE /* sphere.cpp in Sources */,
-				8728A0D61EFFE93900E663BE /* wall_behavior.cpp in Sources */,
-				8728A0DA1EFFEAA000E663BE /* scenea.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

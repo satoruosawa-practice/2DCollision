@@ -2,8 +2,7 @@
 //  app_time.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 6/17/17.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #include "./app_time.h"

@@ -2,8 +2,7 @@
 //  circle_bounce_on_frame.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/12.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #include "./circle_bounce_on_frame.h"

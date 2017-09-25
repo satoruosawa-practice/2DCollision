@@ -1,3 +1,6 @@
+//  Copyright (C) 2017 satoru osawa
+//
+
 #pragma once
 
 #include "ofMain.h"

@@ -2,11 +2,10 @@
 //  circle.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/10.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
-#include "circle.h"
+#include "./circle.h"
 
 Circle::Circle(const AppTime &app_time,
                const ofVec2f &velocity,
@@ -27,10 +26,6 @@ void Circle::updateForce() {
   resetForce();
 //  force_ += ofVec2f(0.0, kGravity) * mass_;
 //  force_ += -velocity_ * damping_;
-}
-
-void Circle::resetForce() {
-  force_ = ofVec2f(0.0, 0.0);
 }
 
 void Circle::updatePos() {

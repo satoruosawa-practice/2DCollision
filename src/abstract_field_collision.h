@@ -2,11 +2,12 @@
 //  abstract_field_collision.h
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/10.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #pragma once
+#ifndef ABSTRACT_FIELD_COLLISION_H_
+#define ABSTRACT_FIELD_COLLISION_H_
 
 #include "ofMain.h"
 #include "./global_definition.h"
@@ -16,3 +17,5 @@ class AbstractFieldCollision {
  public:
   virtual void update(AbstractObject * object) = 0;
 };
+
+#endif  // ABSTRACT_FIELD_COLLISION_H_

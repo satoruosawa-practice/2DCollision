@@ -2,11 +2,10 @@
 //  scene.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/10.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
-#include "scene.h"
+#include "./scene.h"
 
 void Scene::setup(const AppTime &app_time) {
   app_time_ = &app_time;
@@ -51,7 +50,7 @@ void Scene::update() {
 }
 
 void Scene::draw() {
-  for (auto &o : object_container_){
+  for (auto &o : object_container_) {
     o->draw();
   }
 }

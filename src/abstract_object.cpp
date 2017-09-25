@@ -2,17 +2,21 @@
 //  abstract_object.cpp
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/10.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
-#include "abstract_object.h"
+#include "./abstract_object.h"
 
 AbstractObject::AbstractObject(const AppTime &app_time) {
   app_time_ = &app_time;
 }
 
-void AbstractObject::update(){
+void AbstractObject::update() {
   updateForce();
   updatePos();
 }
+
+void AbstractObject::resetForce() {
+  force_ = ofVec2f(0.0, 0.0);
+}
+

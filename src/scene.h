@@ -2,12 +2,14 @@
 //  scene.h
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/10.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #pragma once
+#ifndef SCENE_H_
+#define SCENE_H_
 
+#include <vector>
 #include "ofMain.h"
 #include "./global_definition.h"
 #include "./app_time.h"
@@ -28,3 +30,4 @@ class Scene {
   vector<AbstractFieldCollision*> field_collision_container_;
 };
 
+#endif  // SCENE_H_

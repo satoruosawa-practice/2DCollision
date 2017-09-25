@@ -2,11 +2,12 @@
 //  abstract_object.h
 //  2DCollision
 //
-//  Created by OSAWASatoru on 2017/09/10.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #pragma once
+#ifndef ABSTRACT_OBJECT_H_
+#define ABSTRACT_OBJECT_H_
 
 #include "ofMain.h"
 #include "./global_definition.h"
@@ -22,15 +23,21 @@ class AbstractObject {
   ofVec2f* pVelocity() { return &velocity_; }
   ofVec2f position() const { return position_; }
   ofVec2f velocity() const { return velocity_; }
+  float mass() const { return mass_; }
   void position(const ofVec2f &p) { position_ = p; }
   void velocity(const ofVec2f &v) { velocity_ = v; }
   void color(const ofColor &c) { color_ = c; }
 
  protected:
+  void resetForce();
   virtual void updateForce() = 0;
   virtual void updatePos() = 0;
   const AppTime * app_time_;
+  ofVec2f force_;  // N
   ofVec2f position_;  // m
   ofVec2f velocity_;  // m/s
+  float mass_;  // kg
   ofColor color_;
 };
+
+#endif  // ABSTRACT_OBJECT_H_

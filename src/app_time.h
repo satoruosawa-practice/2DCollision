@@ -2,11 +2,13 @@
 //  app_time.h
 //  2DCollision
 //
-//  Created by OSAWASatoru on 6/17/17.
-//
+//  Copyright (C) 2017 satoru osawa
 //
 
 #pragma once
+#ifndef APP_TIME_H_
+#define APP_TIME_H_
+
 #include "ofMain.h"
 
 class AppTime {
@@ -29,3 +31,5 @@ class AppTime {
   uint64_t elapsed_time_;
   uint64_t last_elapsed_time_;
 };
+
+#endif  // APP_TIME_H_
