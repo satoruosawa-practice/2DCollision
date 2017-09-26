@@ -17,6 +17,9 @@
 #include "./circle_bounce_on_frame.h"
 #include "./circle_passing_on_frame.h"
 #include "./mutual_collision.h"
+#include "./damping_force.h"
+#include "./directional_force.h"
+#include "./radial_force.h"
 
 class Scene {
  public:
@@ -27,6 +30,7 @@ class Scene {
  private:
   const AppTime * app_time_;
   vector<AbstractObject*> object_container_;
+  vector<AbstractFieldForce*> field_force_container_;
   vector<AbstractFieldCollision*> field_collision_container_;
 };
 

@@ -28,10 +28,10 @@
 
 readonly SRCROOT="$(cd "$(dirname "$0")/../"; pwd)"
 readonly CPPLINT="${SRCROOT}/cpplint/cpplint.py"
-readonly FILTERS="-readability/streams,-build/c++11"
+readonly FILTERS="-readability/streams,-build/c++11,-build/include"
 readonly PATTERN=".*/[a-z0-9_-]*\."
 
-for file in $(find -E "${SRCROOT}/src" -type f -regex "${PATTERN}(h|cc|cpp)$"); do
+for file in $(find -E "${SRCROOT}/src" -type f -regex "${PATTERN}(h|cpp)$"); do
   python "${CPPLINT}" --root "src" --filter="${FILTERS}" "${file}"
 done
 

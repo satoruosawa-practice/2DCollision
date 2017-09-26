@@ -26,9 +26,18 @@ void Scene::setup(const AppTime &app_time) {
   float radius = 0.3;  // m
   ofVec2f velocity = ofVec2f(1.0, 1.0);
   ofVec2f position = ofVec2f(5.0, 5.0);
-  float mass = radius * radius * 300.0;  // kg
+  float mass = radius * radius * 10000.0;  // kg
   Circle * c = new Circle(app_time, velocity, position, radius, mass);
   object_container_.push_back(c);
+
+  DampingForce * damping = new DampingForce(5);
+  field_force_container_.push_back(damping);
+//  DirectionalForce * gravity = new DirectionalForce(ofVec2f(0.0, kGravity));
+//  field_force_container_.push_back(gravity);
+  RadialForce * gravitation = new RadialForce(ofVec2f(ofGetWidth() / 2,
+                                                      ofGetHeight() / 2) /
+                                              kPxPerMeter, 5);
+  field_force_container_.push_back(gravitation);
 
   CircleBounceOnFrame * b = new CircleBounceOnFrame();
 //  CirclePassingOnFrame * b = new CirclePassingOnFrame();
@@ -37,7 +46,11 @@ void Scene::setup(const AppTime &app_time) {
 
 void Scene::update() {
   for (auto &o : object_container_) {
-    o->update();
+    o->resetForce();
+    for (auto &f : field_force_container_) {
+      f->updateForce(o);
+    }
+    o->updatePos();
     for (auto &c : field_collision_container_) {
       c->update(o);
     }

@@ -1,5 +1,5 @@
 //
-//  circle.hpp
+//  circle.h
 //  2DCollision
 //
 //  Copyright (C) 2017 satoru osawa
@@ -22,14 +22,8 @@ class Circle : public AbstractObject {
          const ofVec2f &position,
          const float &radius,
          const float &mass);
-  void draw();
-  float radius() const { return radius_; }
-
- protected:
-  void updateForce();
   void updatePos();
-  float radius_;  // m
-//  float damping_;
+  void draw();
 };
 
 #endif  // CIRCLE_H_

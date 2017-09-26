@@ -15,17 +15,10 @@ Circle::Circle(const AppTime &app_time,
 : AbstractObject(app_time) {
   radius_ = radius;
   mass_ = mass;
-//  damping_ = 0.05;
   velocity_ = velocity;
   position_ = position;
   color_ = ofColor(10, 10, 10, 255);
   resetForce();
-}
-
-void Circle::updateForce() {
-  resetForce();
-//  force_ += ofVec2f(0.0, kGravity) * mass_;
-//  force_ += -velocity_ * damping_;
 }
 
 void Circle::updatePos() {

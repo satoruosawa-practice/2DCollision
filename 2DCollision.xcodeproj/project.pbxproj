@@ -12,6 +12,10 @@
 		873EF9771F6820F800235230 /* circle_bounce_on_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF9751F6820F800235230 /* circle_bounce_on_frame.cpp */; };
 		873EF97C1F69F0E600235230 /* circle_passing_on_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF97A1F69F0E600235230 /* circle_passing_on_frame.cpp */; };
 		873EF97F1F69F29E00235230 /* mutual_collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 873EF97D1F69F29E00235230 /* mutual_collision.cpp */; };
+		874FC9901F7A7C4D00049771 /* abstract_field_force.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874FC98E1F7A7C4D00049771 /* abstract_field_force.cpp */; };
+		874FC9931F7A807200049771 /* damping_force.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874FC9911F7A807200049771 /* damping_force.cpp */; };
+		874FC9961F7AA05600049771 /* directional_force.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874FC9941F7AA05600049771 /* directional_force.cpp */; };
+		874FC9991F7AA44600049771 /* radial_force.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874FC9971F7AA44600049771 /* radial_force.cpp */; };
 		876A96E61F657674004C06C6 /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96E41F657674004C06C6 /* scene.cpp */; };
 		876A96E91F6576E4004C06C6 /* circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96E71F6576E4004C06C6 /* circle.cpp */; };
 		876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 876A96EA1F65792C004C06C6 /* abstract_object.cpp */; };
@@ -61,6 +65,14 @@
 		873EF97B1F69F0E600235230 /* circle_passing_on_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circle_passing_on_frame.h; sourceTree = "<group>"; };
 		873EF97D1F69F29E00235230 /* mutual_collision.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mutual_collision.cpp; sourceTree = "<group>"; };
 		873EF97E1F69F29E00235230 /* mutual_collision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mutual_collision.h; sourceTree = "<group>"; };
+		874FC98E1F7A7C4D00049771 /* abstract_field_force.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = abstract_field_force.cpp; sourceTree = "<group>"; };
+		874FC98F1F7A7C4D00049771 /* abstract_field_force.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstract_field_force.h; sourceTree = "<group>"; };
+		874FC9911F7A807200049771 /* damping_force.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = damping_force.cpp; sourceTree = "<group>"; };
+		874FC9921F7A807200049771 /* damping_force.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = damping_force.h; sourceTree = "<group>"; };
+		874FC9941F7AA05600049771 /* directional_force.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = directional_force.cpp; sourceTree = "<group>"; };
+		874FC9951F7AA05600049771 /* directional_force.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = directional_force.h; sourceTree = "<group>"; };
+		874FC9971F7AA44600049771 /* radial_force.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = radial_force.cpp; sourceTree = "<group>"; };
+		874FC9981F7AA44600049771 /* radial_force.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = radial_force.h; sourceTree = "<group>"; };
 		876A96E41F657674004C06C6 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
 		876A96E51F657674004C06C6 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		876A96E71F6576E4004C06C6 /* circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
@@ -129,6 +141,21 @@
 			name = mutual_collision;
 			sourceTree = "<group>";
 		};
+		874FC98D1F7A7AD200049771 /* field_force */ = {
+			isa = PBXGroup;
+			children = (
+				874FC98F1F7A7C4D00049771 /* abstract_field_force.h */,
+				874FC98E1F7A7C4D00049771 /* abstract_field_force.cpp */,
+				874FC9921F7A807200049771 /* damping_force.h */,
+				874FC9911F7A807200049771 /* damping_force.cpp */,
+				874FC9951F7AA05600049771 /* directional_force.h */,
+				874FC9941F7AA05600049771 /* directional_force.cpp */,
+				874FC9981F7AA44600049771 /* radial_force.h */,
+				874FC9971F7AA44600049771 /* radial_force.cpp */,
+			);
+			name = field_force;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +193,7 @@
 				876A96E51F657674004C06C6 /* scene.h */,
 				876A96E41F657674004C06C6 /* scene.cpp */,
 				873EF9781F68250B00235230 /* object */,
+				874FC98D1F7A7AD200049771 /* field_force */,
 				873EF9791F68251B00235230 /* field_collision */,
 				873EF9801F69F2A900235230 /* mutual_collision */,
 				8728A0C41EFFD90700E663BE /* app_time.cpp */,
@@ -271,13 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874FC9931F7A807200049771 /* damping_force.cpp in Sources */,
 				873EF97F1F69F29E00235230 /* mutual_collision.cpp in Sources */,
+				874FC9991F7AA44600049771 /* radial_force.cpp in Sources */,
+				874FC9961F7AA05600049771 /* directional_force.cpp in Sources */,
 				876A96E61F657674004C06C6 /* scene.cpp in Sources */,
 				873EF9771F6820F800235230 /* circle_bounce_on_frame.cpp in Sources */,
 				8728A0C81EFFD90700E663BE /* app_time.cpp in Sources */,
 				873EF9741F681E2300235230 /* abstract_field_collision.cpp in Sources */,
 				873EF97C1F69F0E600235230 /* circle_passing_on_frame.cpp in Sources */,
 				876A96E91F6576E4004C06C6 /* circle.cpp in Sources */,
+				874FC9901F7A7C4D00049771 /* abstract_field_force.cpp in Sources */,
 				876A96EC1F65792C004C06C6 /* abstract_object.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
