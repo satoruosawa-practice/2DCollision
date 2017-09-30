@@ -10,7 +10,7 @@
 
 const string MutualCollision::circle_type_ = typeid(*new Circle()).name();
 
-float MutualCollision::cor_ = 1.0;
+float MutualCollision::cor_ = 0.9;
 
 void MutualCollision::collision(AbstractObject * object_a,
                                 AbstractObject * object_b) {

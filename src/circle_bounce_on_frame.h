@@ -16,7 +16,11 @@
 
 class CircleBounceOnFrame : public AbstractFieldCollision {
  public:
+  CircleBounceOnFrame(float cor = 1.0);
   void update(AbstractObject * object);
+
+ private:
+  float cor_;
 };
 
 #endif  // CIRCLE_BOUNCE_ON_FRAME_H_

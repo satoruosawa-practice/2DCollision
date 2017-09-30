@@ -16,12 +16,14 @@
 
 class RadialForce : public AbstractFieldForce {
  public:
-  RadialForce(const ofVec2f &center_pos, const float &intensity);
+  RadialForce(const ofVec2f &center_pos, const float &intensity,
+              const float &action_radius);
   virtual void updateForce(AbstractObject * object);
 
  private:
   ofVec2f center_pos_;
   float intensity_;
+  float action_radius_;
 };
 
 #endif  // RADIAL_FORCE_H_

@@ -16,7 +16,11 @@
 
 class CirclePassingOnFrame : public AbstractFieldCollision {
  public:
+  CirclePassingOnFrame(float cor = 1.0);
   void update(AbstractObject * object);
+
+ private:
+  float cor_;
 };
 
 #endif  // CIRCLE_PASSING_ON_FRAME_H_
