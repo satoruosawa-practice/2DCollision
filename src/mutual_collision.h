@@ -18,11 +18,11 @@
 class MutualCollision {
  public:
   static void collision(AbstractObject * object_a, AbstractObject * object_b);
+  static float cor_;
 
  private:
   static void circles(Circle * circle_a, Circle * circle_b);
   static const string circle_type_;
-  static float cor_;
 };
 
 #endif  // MUTUAL_COLLISION_H_

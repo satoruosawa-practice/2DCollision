@@ -30,3 +30,8 @@ void RadialForce::updateForce(AbstractObject * object) {
     object->addForce(direction * object->mass() * intensity_ * pct);
   }
 }
+
+void RadialForce::updateCenterPos(const ofVec2f &center_pos) {
+  std::cout<< 0<<std::endl;
+  center_pos_ = center_pos;
+}

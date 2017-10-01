@@ -7,6 +7,10 @@
 
 #include "./scene.h"
 
+Scene::Scene() {
+  radial_force_nema_ = typeid(*new RadialForce()).name();
+}
+
 void Scene::setup(const AppTime &app_time) {
   app_time_ = &app_time;
   int array = 10;
@@ -79,6 +83,7 @@ void Scene::setup(const AppTime &app_time) {
   CircleBounceOnFrame * b = new CircleBounceOnFrame();
 //  CirclePassingOnFrame * b = new CirclePassingOnFrame();
   field_collision_container_.push_back(b);
+  MutualCollision::cor_ = 0.0;
 }
 
 void Scene::update() {
@@ -104,3 +109,13 @@ void Scene::draw() {
     o->draw();
   }
 }
+
+void Scene::mouseMoved(int x, int y) {
+  for (auto &f : field_force_container_) {
+    if(typeid(*f).name() == radial_force_nema_) {
+      dynamic_cast<RadialForce*>(f)->updateCenterPos(ofVec2f(x, y) /
+                                                     kPxPerMeter);
+    }
+  }
+}
+

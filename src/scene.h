@@ -10,6 +10,8 @@
 #define SCENE_H_
 
 #include <vector>
+#include <typeinfo>
+#include <string>
 #include "ofMain.h"
 #include "./global_definition.h"
 #include "./app_time.h"
@@ -23,15 +25,19 @@
 
 class Scene {
  public:
+  Scene();
   void setup(const AppTime &app_time);
   void update();
   void draw();
+  void mouseMoved(int x, int y);
 
  private:
   const AppTime * app_time_;
   vector<AbstractObject*> object_container_;
   vector<AbstractFieldForce*> field_force_container_;
   vector<AbstractFieldCollision*> field_collision_container_;
+
+  string radial_force_nema_;
 };
 
 #endif  // SCENE_H_
